@@ -65,7 +65,7 @@ function generateBanners(lista, div){
 
             const banner = divEl.querySelector(".banner");
             banner.addEventListener("click", async () => {
-                const movieEl = await fetch(`http://api.themoviedb.org/3/movie/${movie.id}?api_key=4315d351a466b792ac57f8880c939f90`);
+                const movieEl = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=4315d351a466b792ac57f8880c939f90`);
                 const listaEl = await movieEl.json()
 
                 if(listaEl.homepage){
@@ -227,7 +227,7 @@ favBtn.addEventListener("click", () => {
 function generateFavBanners(div){
     favList.forEach(async (id) => {
     
-        const movie = await fetch(`http://api.themoviedb.org/3/movie/${id}?api_key=4315d351a466b792ac57f8880c939f90`);
+        const movie = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=4315d351a466b792ac57f8880c939f90`);
         const lista = await movie.json()
         const img = IMAGE_PATH + lista.poster_path;
 
@@ -261,7 +261,7 @@ function generateFavBanners(div){
 
         const banner = divEl.querySelector(".banner");
             banner.addEventListener("click", async () => {
-                const movieEl = await fetch(`http://api.themoviedb.org/3/movie/${lista.id}?api_key=4315d351a466b792ac57f8880c939f90`);
+                const movieEl = await fetch(`https://api.themoviedb.org/3/movie/${lista.id}?api_key=4315d351a466b792ac57f8880c939f90`);
                 const listaEl = await movieEl.json()
 
                 if(listaEl.homepage){
