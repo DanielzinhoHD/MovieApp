@@ -1,4 +1,4 @@
-# VideoApp
+# MovieApp
 Searching video app with favorites function
 
 In this app you can search for movies, see their average vote and go to their websites (if they exist), with some other tabs showing the trending, top rated and upcoming ones. When clicked on the star icon, it will be added to your favorites tab, stored in local storage.
